@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -w",
-    "build:dev": "npm run build -- --watch --mode=development",
+    "build:dev": "npm run build -- --watch --mode=production",
     "seed": "node seed.js",
     "start": "node server",
     "start:dev": "npm run build:dev & npm run start-server",
