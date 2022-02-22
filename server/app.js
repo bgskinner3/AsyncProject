@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 // inside or your local machine (each dev should have one)
 // ---> developemnt, test
 
-if(process.env.NODE.ENV !== 'production') require('../secrets')
+// if(process.env.NODE.ENV !== 'production') require('../secrets')
 
 
 // const SECRET_KEY = process.env.SECRET_KEY
