@@ -4,7 +4,6 @@ import { authenticate } from '../store/auth';
 
 const AuthForm = (props) => {
   const { name, displayName, handleSubmit, error } = props;
-  // console.log(props.location);
   return (
     <div>
       <form onSubmit={handleSubmit} name={name}>

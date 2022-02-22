@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
 export const Home = (props) => {
   const { username } = props;
 
@@ -11,8 +10,6 @@ export const Home = (props) => {
     </div>
   );
 };
-
-
 
 const mapState = (state) => {
   return {

@@ -14,8 +14,8 @@ const init = async () => {
     app.listen(port, () => 
     
     console.log(`Your server, listening on port ${port}`));
-  } catch (ex) {
-    console.log(ex);
+  } catch (err) {
+    console.log(err);
   }
 };
 

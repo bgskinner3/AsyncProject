@@ -8,9 +8,14 @@ loginRouter.post('/login', async (req, res, next) => {
   try {
     res.send({ token: await User.authenticate(req.body) });
   } catch (err) {
+    
     next(err);
   }
 });
+
+
+
+
 loginRouter.post('/signup', async (req, res, next) => {
   try {
     // we trust that our users will only pass in a username and password AND our 
@@ -19,6 +24,7 @@ loginRouter.post('/signup', async (req, res, next) => {
     const { username, password } = req.body
     // destructuring both of these helps prevent injection attacks
     // by way of making the user an admin. 
+
     const user = await User.create({ username, password});
     res.send({ token: await user.generateToken() });
   } catch (err) {
@@ -45,8 +51,8 @@ loginRouter.post('/signup', async (req, res, next) => {
 loginRouter.get('/me', async (req, res, next) => {
   try {
     res.send(await User.findByToken(req.headers.authorization));
-  } catch (ex) {
-    next(ex);
+  } catch (err) {
+    next(err);
   }
 });
 
